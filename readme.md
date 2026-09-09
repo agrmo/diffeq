@@ -10,4 +10,10 @@ A solver for
 (d/dx)y = ay
 ```
 
-i.e. a simple exponential.
+with initial conditions
+
+```
+y(0) = y0
+```
+
+i.e. a simple exponential solver.

@@ -9,9 +9,8 @@
   </target>
 
   <target name="run" depends="compile">
-    <java classname="gleichung.eins.ddxyay.Main"
-          classpath="classes"
-          fork="true"></java>
+    <java classname="funktion.eins.eins.ddxyay.Main"
+          classpath="classes"></java>
   </target>
 
 </project>

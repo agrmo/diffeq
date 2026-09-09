@@ -8,8 +8,8 @@ import funktion.eins.eins.Einseinsfunktion;
 public class Main {
     static void beispieleins() {
 
-	double[] x = Zahlenreihe.reihe(0, 10, 30);
-	Einseinsfunktion f = new Ddxyay();
+	double[] x = Zahlenreihe.reihe(0, 3, 30);
+	Einseinsfunktion f = new Ddxyay(-1, 200);
 	double[] y = f.berechne(x);
 
 	for (int i = 0; i < x.length; i++) {

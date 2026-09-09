@@ -4,15 +4,21 @@ import funktion.eins.eins.Einseinsfunktion;
 
 public class Ddxyay implements Einseinsfunktion {
 
-    public Ddxyay() {
-	// ...
+    double parametera;
+    double bedingungynull;
+    
+    public Ddxyay(double a, double ynull) {
+	this.parametera = a;
+	this.bedingungynull = ynull;
     }
 
     public double[] berechne(double[] x) {
+
+	double c = Math.log(this.bedingungynull);
 	double[] y = new double[x.length];
 	
 	for (int i = 0; i < x.length; i++) {
-	    y[i] = 2.0 * Math.exp(-3.0 * x[i]);
+	    y[i] = c * Math.exp(this.parametera * x[i]);
 	}
 
 	return y;	
