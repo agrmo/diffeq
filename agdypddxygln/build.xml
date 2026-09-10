@@ -1,0 +1,16 @@
+<project>
+
+  <target name="compile">
+    <mkdir dir="classes"/>
+
+    <javac srcdir="src"
+           destdir="classes"
+           includeantruntime="false"/>
+  </target>
+
+  <target name="run" depends="compile">
+    <java classname="funktion.eins.eins.agdypddxygln.Main"
+          classpath="classes"></java>
+  </target>
+
+</project>
