@@ -17,3 +17,12 @@ y(0) = y0
 ```
 
 i.e. a simple exponential solver.
+
+## ddxyxexq
+
+A solver for 
+
+```
+(d/dx)y = x e^(x^2)
+y(0) = y0
+```
