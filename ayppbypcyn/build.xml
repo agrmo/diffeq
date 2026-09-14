@@ -10,7 +10,7 @@
   
 
   <target name="run" depends="compile">
-    <java classname="funktion.eins.eins.ayppbypcyz.Main"
+    <java classname="funktion.eins.eins.ayppbypcyn.Main"
           classpath="classes"></java>
   </target>
 

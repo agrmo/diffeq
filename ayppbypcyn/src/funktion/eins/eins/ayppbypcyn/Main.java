@@ -1,17 +1,17 @@
-package funktion.eins.eins.ayppbypcyz;
+package funktion.eins.eins.ayppbypcyn;
 
 import zahl.eins.Zahlenreihe;
 import funktion.eins.eins.Einseinsfunktion;
 
-// funktion.eins.eins.ayppbypcyz.Main
+// funktion.eins.eins.ayppbypcyn.Main
 
 public class Main {
     static void beispieleins() {
 
 	double[] x = Zahlenreihe.reihe(0, 10, 10);
 
-	Einseinsfunktion f = new Ayppbypcyz(1, 1, 1,
-					    1, 1);
+	Einseinsfunktion f = new Ayppbypcyn(2, 1, 10,
+					    10, 5);
 	double[] y = f.berechne(x);
 
 	for (int i = 0; i < x.length; i++) {
