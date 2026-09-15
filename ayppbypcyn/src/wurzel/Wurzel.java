@@ -1,7 +1,5 @@
 package wurzel;
 
-import imaginaer.Imaginaer;
-
 // Die Wurzel des Polynoms
 // ax^2 + bx + c =  0
 public class Wurzel {

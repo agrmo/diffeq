@@ -1,6 +1,6 @@
-# equation
+# diffeq
 
-Implementations of various equations I use for simulation and modeling.
+Various systematized diffeq solvers.
 
 ## ddxyay
 
@@ -46,7 +46,7 @@ y0 = 90
 [70.0, NaN]
 ```
 
-# ddxyxcosx
+## ddxyxcosx
 
 A solver for
 
@@ -66,7 +66,7 @@ y(0)=200
 [9.0, 201.79793610529114]
 ```
 
-# egyddxyxa
+## egyddxyxa
 
 A solver for
 
@@ -86,7 +86,7 @@ a = 0.9, y0 = 10
 [2.0, 632.321766447662]
 ```
 
-# yppmyn
+## yppmyn
 
 A solver for
 
@@ -107,9 +107,9 @@ a = 100 b = 10
 [2.0, -32.521709386457424]
 ```
 
-# ayppbypcyn
+## ayppbypcyn
 
-A solver for the typical second order ODE, with Neumann boundary conditions.
+A solver for the homogenous second order ODE with Neumann boundary conditions.
 
 ```
 ay'' + by' + cy = 0
@@ -117,17 +117,13 @@ y(0)=y0
 y'(0)=yp0
 ```
 
-e.g.
+Case imaginary roots,
 
 ```
 a = 2, b = 1, c = 10
 y(0) = 10
 y'(0) = 5
-```
 
-gives
-
-```
 r0 -0.25
 s0 2.222048604328897
 c1 10.0
@@ -144,7 +140,29 @@ c2 2.4751933820372525
 [9.0, 0.6696240322022905]
 ```
 
-# ayppbypcyfcoskx
+Case equal roots,
+
+```
+a = 1, b = 2, c = 1
+y(0) = 3
+y'(0) = 7
+
+reins -1.0
+ceins 3.0
+czwei 10.0
+[0.0, 3.0]
+[1.0, 4.782432735228751]
+[2.0, 3.112711514442092]
+[3.0, 1.64297325613951]
+[4.0, 0.7875724722155697]
+[5.0, 0.35711119095152977]
+[6.0, 0.1561613871299806]
+[7.0, 0.06656738348547968]
+[8.0, 0.027843398115908483]
+[9.0, 0.0114771117800612]
+```
+
+## ayppbypcyfcoskx
 
 A solver for the forced second order ODE,
 

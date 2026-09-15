@@ -49,8 +49,21 @@ public class Ayppbypcyn implements Einseinsfunktion {
 	    }
 	    
 	} else if (w.discriminant() == 0.0) {
+
+	    double reins = (-1.0 * this.b) / (2.0 * this.a);
+	    double ceins = this.ynull;
+	    double czwei = this.ypnull - this.ynull * reins;
+	    System.out.println("reins " + reins);
+	    System.out.println("ceins " + ceins);
+	    System.out.println("czwei " + czwei);
+
+	    for (int i = 0; i < x.length; i++) {
+		y[i] = ceins * Math.exp(reins * x[i])
+		    + czwei * x[i] * Math.exp(reins * x[i]);
+	    }
 	    
 	} else if (w.discriminant() > 0) {
+
 	    
 	}
 
