@@ -32,9 +32,13 @@ public class Ayppbypcyn implements Einseinsfunktion {
 	double[] y = new double[x.length];
 
 	if (w.discriminant() < 0.0) {
+
+	    // [r0, s0]; r1, r2 = r0 +- is0
+	    //
+	    double[] wurzeln = w.wurzeluntennull();
+	    double rnull = wurzeln[0];
+	    double snull = wurzeln[1];
 	    
-	    double rnull = -this.b / (2.0 * this.a);
-	    double snull = (1.0/(2.0*this.a)) * Math.sqrt(-(this.b*this.b - 4.0 * this.a * this.c));
 	    double ceins = this.ynull;
 	    double czwei = (this.ypnull - this.a * rnull)/(snull);
 
@@ -50,7 +54,7 @@ public class Ayppbypcyn implements Einseinsfunktion {
 	    
 	} else if (w.discriminant() == 0.0) {
 
-	    double reins = (-1.0 * this.b) / (2.0 * this.a);
+	    double reins = w.wurzelgleichnull();
 	    double ceins = this.ynull;
 	    double czwei = this.ypnull - this.ynull * reins;
 	    System.out.println("reins " + reins);
@@ -64,7 +68,20 @@ public class Ayppbypcyn implements Einseinsfunktion {
 	    
 	} else if (w.discriminant() > 0) {
 
-	    
+	    double[] wurzeln = w.wurzelobennull();
+	    double reins = wurzeln[0];
+	    double rzwei = wurzeln[1];
+	    double czwei = (this.ypnull - this.ynull * reins) / (rzwei - reins);
+	    double ceins = this.ynull - czwei;
+
+	    System.out.println("reins " + reins);
+	    System.out.println("rzwei " + rzwei);
+	    System.out.println("ceins " + ceins);
+	    System.out.println("czwei " + czwei);
+
+	    for (int i = 0; i < x.length; i++) {
+		y[i] = ceins * Math.exp(reins * x[i]) + czwei * Math.exp(rzwei * x[i]);
+	    }
 	}
 
 	return y;	
