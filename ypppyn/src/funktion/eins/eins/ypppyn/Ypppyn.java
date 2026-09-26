@@ -1,8 +1,8 @@
-package funktion.eins.eins.yppmyn;
+package funktion.eins.eins.ypppyn;
 
 import funktion.eins.eins.Einseinsfunktion;
 
-public class Yppmyn implements Einseinsfunktion {
+public class Ypppyn implements Einseinsfunktion {
 
     //
     // (d/dx)^2 y(x) + y(x) = 0
@@ -10,12 +10,12 @@ public class Yppmyn implements Einseinsfunktion {
     // y(0) = a
     // y'(0) = b
     //
-    // Second order ODE, vanishing Dirichlet
+    // Dirichlet-Neumann.
 
     double a;
     double b;
 
-    public Yppmyn(double ea, double eb) {
+    public Ypppyn(double ea, double eb) {
 	this.a = ea;
 	this.b = eb;
     }

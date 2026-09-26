@@ -109,7 +109,7 @@ a = 100 b = 10
 
 ## ayppbypcyn
 
-A solver for the homogenous second order ODE with Neumann boundary conditions.
+A solver for the homogenous second order ODE with Dirichlet-Neumann boundary conditions. Handles all three cases for the roots.
 
 ```
 ay'' + by' + cy = 0
