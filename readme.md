@@ -1,6 +1,6 @@
 # diffeq
 
-Various systematized diffeq solvers.
+Numerical diffeq solvers.
 
 ## ddxyay
 
@@ -86,7 +86,7 @@ a = 0.9, y0 = 10
 [2.0, 632.321766447662]
 ```
 
-## yppmyn
+## ypppyn
 
 A solver for
 
@@ -101,10 +101,9 @@ e.g.
 ```
 a = 100 b = 10
 [0.0, 100.0]
-[0.5, 92.5525115750793]
-[1.0, 62.44494043489294]
-[1.5, 17.048670032810836]
-[2.0, -32.521709386457424]
+[0.5, 135.70081004945757]
+[1.0, 138.17732906760364]
+...
 ```
 
 ## ayppbypcyn
@@ -207,4 +206,14 @@ c = 100pi^2
 [7.0, 1.0498013373930988]
 [8.0, 1.0497791557937826]
 [9.0, 1.0497740200403944]
+```
+
+# wave/dnsinzero
+
+A solver for the wave equation with Dirichlet-Neumann boundary conditions.
+
+```
+(p/px)^2 u = (p/py)^2 u
+Dirichlet u(x,0)=sin(pi/l x)
+Neumann (p/py) u(x,0)=0
 ```
